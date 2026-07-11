@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://bpaqijwqpatmb"]
+
+[ext_resource type="Texture2D" uid="uid://cvhnvf0w113vk" path="res://assets/2D RPG Platformer Sprites/enemies/spider2.png" id="1_cbj0a"]
+[ext_resource type="Script" uid="uid://d2a2ubrdygi4h" path="res://script/enemy_1.gd" id="1_uivv5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uivv5"]
+atlas = ExtResource("1_cbj0a")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jhall"]
+atlas = ExtResource("1_cbj0a")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a7q5a"]
+atlas = ExtResource("1_cbj0a")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dodob"]
+atlas = ExtResource("1_cbj0a")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ufwdq"]
+atlas = ExtResource("1_cbj0a")
+region = Rect2(128, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rfsqb"]
+atlas = ExtResource("1_cbj0a")
+region = Rect2(160, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p3tne"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uivv5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jhall")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a7q5a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dodob")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ufwdq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rfsqb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x5mtm"]
+radius = 8.062258
+
+[node name="enemy1" type="CharacterBody2D" unique_id=771481679]
+position = Vector2(0, -15)
+script = ExtResource("1_uivv5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1635931554]
+sprite_frames = SubResource("SpriteFrames_p3tne")
+frame_progress = 0.07630487
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1212134483]
+position = Vector2(0, 9)
+shape = SubResource("CircleShape2D_x5mtm")

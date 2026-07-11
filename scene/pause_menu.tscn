@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://dep7fbtuqr1x7"]
+
+[ext_resource type="Script" uid="uid://dynn4jgshups" path="res://script/pause_menu.gd" id="1_grdc7"]
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=49578373]
+process_mode = 3
+script = ExtResource("1_grdc7")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=858218925]
+anchors_preset = -1
+anchor_right = -0.6526469
+anchor_bottom = -0.6419753
+offset_left = -6.0
+offset_top = -10.0
+offset_right = 1916.8492
+offset_bottom = 1074.0
+color = Color(0, 0, 0, 0.43529412)
+metadata/_edit_use_anchors_ = true
+
+[node name="Resume" type="Button" parent="." unique_id=1439940723]
+offset_left = 412.0
+offset_top = 184.0
+offset_right = 729.0
+offset_bottom = 302.0
+theme_override_font_sizes/font_size = 80
+text = "Resume"
+metadata/_edit_use_anchors_ = true
+
+[node name="Main Menu" type="Button" parent="." unique_id=1654022472]
+offset_left = 356.0
+offset_top = 417.0
+offset_right = 799.0
+offset_bottom = 535.0
+theme_override_font_sizes/font_size = 80
+text = "Main Menu"
+metadata/_edit_use_anchors_ = true
+
+[node name="start" type="AudioStreamPlayer" parent="." unique_id=2011470708]
+
+[node name="quit" type="AudioStreamPlayer" parent="." unique_id=531268080]
+
+[connection signal="pressed" from="Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Main Menu" to="." method="_on_main_menu_pressed"]
